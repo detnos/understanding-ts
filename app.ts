@@ -1,41 +1,16 @@
-// const person: {
-//     name: string;
-//     age: number;
-// } = {
-// const person: {
-//     name: string;
-//     age: number;
-//     hobbies: string[];
-//     role: [number, string];
-// } = {
+function combine(input1: number | string, input2: number | string) {
+  let result;
+  if (typeof input1 === 'number' && typeof input2 === 'number') {
+    result = input1 + input2;
+  } else {
+      result = input1.toString() + input2.toString();
+  }
 
-// const ADMIN = 0;
-// const READ_ONLY = 1;
-// const AUTHOR = 2;
-
-enum Role {ADMIN = 5, READ_ONLY, AUTHOR}; //5, 6 7 instead of 0, 1, 2 and can assign any of the items to any number
-
-const person = {
-    name: 'Max',
-    age: 30,
-    hobbies: ['Sports', 'Cooking'],
-    role: Role.ADMIN
-};
-
-// person.role.push('admin);
-// person.role[1] = 10;
-
-// person.role = [0, 'admin', 'user'];
-
-let favoriteActivities: string[];
-favoriteActivities = ['Sports'];
-
-console.log(person.name);
-
-for (const hobby of person.hobbies) {
-    console.log(hobby);
+  return result;
 }
 
-if (person.role === Role.ADMIN) {
-    console.log('is admin');
-}
+const combineAges = combine(30, 26);
+console.log(combineAges);
+
+const combineNames = combine('Max', 'Anna');
+console.log(combineNames);
