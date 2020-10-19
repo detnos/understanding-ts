@@ -13,7 +13,7 @@
 // const READ_ONLY = 1;
 // const AUTHOR = 2;
 
-enum Role {ADMIN, READ_ONLY, AUTHOR};
+enum Role {ADMIN = 5, READ_ONLY, AUTHOR}; //5, 6 7 instead of 0, 1, 2 and can assign any of the items to any number
 
 const person = {
     name: 'Max',
